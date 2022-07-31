@@ -21,7 +21,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     chunkFilename: 'bundle.[name].js',
-    publicPath: '/',
+    publicPath: 'https://uther-nax.github.io/took-kit/',
   },
   plugins: [
     new HtmlWebpackPlugin({
