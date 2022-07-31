@@ -11,6 +11,7 @@
         const params = Object.fromEntries(
           location.search
             .replace(/^\?/, '')
+            .replace(/tool-kit\//, '')
             .split('&')
             .map(str => str.split('='))
 
