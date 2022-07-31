@@ -5,6 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+    function redirect() {
+      if (location.search) {
+        const params = Object.fromEntries(
+          location.search
+            .replace(/^\?/, '')
+            .split('&')
+            .map(str => str.split('='))
+
+        )
+        if (params.target) {
+          history.replaceState(null, null, params.target)
+        }
+      }
+    }
+  </script>
   <script defer src="bundle.js"></script>
   <style>
     html,body {
